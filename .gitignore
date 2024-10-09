@@ -1,0 +1,4 @@
+src/__*
+test/.gitkeep
+experiments/.ipynb_*
+model/*
