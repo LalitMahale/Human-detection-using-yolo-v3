@@ -3,7 +3,11 @@ from image_detection import Detect
 
 class Video:
 
-    def videodetection(self,video_input:int = 0):
+    def videodetection(self,video_input = 0):
+        """
+        Video_input : By default it will 0 (local web cam) 
+                      for Video  pass the video path.
+        """
         video = cv2.VideoCapture(video_input)
 
         while video.isOpened():
@@ -14,7 +18,6 @@ class Video:
             cv2.imshow("video",image)
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
-
         video.release()
         cv2.destroyAllWindows()
 

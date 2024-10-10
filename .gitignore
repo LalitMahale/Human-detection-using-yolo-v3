@@ -1,4 +1,4 @@
 src/__*
 test/.gitkeep
 experiments/.ipynb_*
-model/*
+model/yolov3.weights

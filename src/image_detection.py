@@ -5,6 +5,12 @@ from setting import YOLO_CFG,YOLO_WEIGHTS,COCO_FILE,OBJECT
 
 class Detect:
     def image_detection(self,image_path= None,video_input:bool=None):
+        """
+        image_Path : By default None Provide image path for image detection.
+
+        video_input : By  default None It will be bool (True and False) for video Access.
+        
+        """
         net = cv2.dnn.readNet(YOLO_WEIGHTS,YOLO_CFG)
         layer_names =net.getLayerNames()
 
@@ -18,7 +24,6 @@ class Detect:
         else:
             image = image_path
         height, width = image.shape[:2]
-        print("shape",image.shape)
         blob = cv2.dnn.blobFromImage(image, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
         net.setInput(blob)
         outs = net.forward(output_layer)    
@@ -45,12 +50,9 @@ class Detect:
                     boxes.append([x, y, w, h])
                     confidences.append(float(confidence))
                     class_ids.append(class_id)
-
-
         # Apply non-max suppression to remove overlaps
         indices = cv2.dnn.NMSBoxes(boxes, confidences, 0.5, 0.4)
-        print("indices",indices)
-        # Draw bounding boxes around detected humans
+        #bounding boxes around detected humans
         for i in indices:
             x, y, w, h = boxes[i]
             cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
