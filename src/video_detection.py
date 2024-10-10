@@ -1,5 +1,5 @@
 import cv2
-from image_detection import Detect
+from src.image_detection import ImageDetect
 
 class VideoDetect:
 

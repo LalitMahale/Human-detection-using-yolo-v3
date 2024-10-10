@@ -1,9 +1,11 @@
 import os
 import cv2
 import numpy as np
-from setting import YOLO_CFG,YOLO_WEIGHTS,COCO_FILE,OBJECT
+from src.setting import YOLO_CFG,YOLO_WEIGHTS,COCO_FILE,OBJECT
 
 class ImageDetect:
+    def __init__(self) -> None:
+        pass
     def image_detection(self,image_path= None,video_input:bool=None):
         """
         image_Path : By default None Provide image path for image detection.
@@ -19,7 +21,10 @@ class ImageDetect:
         with open(COCO_FILE,"r") as f:
             classes = f.read().split("\n")
         if not video_input:
-            image = cv2.imread(image_path)
+            try:
+                image = cv2.imread(image_path)
+            except :
+                image = image_path
             image = cv2.resize(image, (600,400))
         else:
             image = image_path

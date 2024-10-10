@@ -2,3 +2,4 @@ src/__*
 test/.gitkeep
 experiments/.ipynb_*
 model/yolov3.weights
+.gradio*
