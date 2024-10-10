@@ -1,7 +1,7 @@
 import cv2
 from image_detection import Detect
 
-class Video:
+class VideoDetect:
 
     def videodetection(self,video_input = 0):
         """

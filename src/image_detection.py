@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 from setting import YOLO_CFG,YOLO_WEIGHTS,COCO_FILE,OBJECT
 
-class Detect:
+class ImageDetect:
     def image_detection(self,image_path= None,video_input:bool=None):
         """
         image_Path : By default None Provide image path for image detection.
