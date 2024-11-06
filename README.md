@@ -29,18 +29,11 @@ This project implements human detection using the YOLOv3 (You Only Look Once) mo
 ## Usage
 1. **Run the Detection Script**:
    ```bash
-   python app.py --input <input_path> --output <output_path>
+   python app.py
    ```
-   - `<input_path>`: Path to the input video or image.
-   - `<output_path>`: Path for saving processed output.
 
 ## Configuration
 - Configure parameters such as confidence threshold and input size within `app.py` to optimize detection.
-
-## Example
-```bash
-python app.py --input sample_video.mp4 --output output_video.mp4
-```
 
 ## License
 This project is licensed under the MIT License.
