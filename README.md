@@ -23,7 +23,7 @@ This project implements human detection using the YOLOv3 (You Only Look Once) mo
    ```
 
 ## Setup
-- **Model Weights**: Download the YOLOv3 weights from [Download Weight for Yolo v3](https://huggingface.co/spaces/Epitech/Scarecrow/blob/main/yolov3.weights).
+- **Model Weights**: Download the YOLOv3 weights from [Download](https://huggingface.co/spaces/Epitech/Scarecrow/blob/main/yolov3.weights).
 - Place the downloaded weights in the appropriate directory as required by `app.py`.
 
 ## Usage
